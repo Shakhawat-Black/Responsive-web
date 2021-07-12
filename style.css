@@ -57,6 +57,7 @@ hr{
 }
 .blog{
     display: flex;
+    padding: 1px 2px;
 }
 .blog .thumbnail img{
     width: 177px;
@@ -78,7 +79,44 @@ hr{
     color: #562EEF;
 }
 /*--Courses Style--*/
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course{
+    padding: 2px 2px;
+    box-shadow: 1px 1px white 5%;
+}
 .course .course-banner img{
     width: 224px;
     height: 104px;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+}
+/*--Media Qweries--*/
+
+/*--Mobile Devices--*/
+@media only screen and (max-width:688px){
+    .container{
+        width: 100%;
+    }
+    .players .blogs .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player .blog .course{
+        flex-direction: column;
+    }
 }
